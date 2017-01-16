@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.email = ['glex.spb@gmail.com']
 
   s.summary = 'Renders KaTeX from Ruby.'
-  s.description = 'Exposes KaTeX server-side renderer via mini_racer.'
+  s.description = 'Exposes KaTeX server-side renderer to Ruby.'
   s.homepage = 'https://github.com/glebm/katex-ruby'
   s.license = 'MIT'
 
@@ -20,6 +20,8 @@ Gem::Specification.new do |s|
   s.bindir = 'exe'
   s.executables = s.files.grep(%r{^exe/}) { |f| File.basename(f) }
   s.require_paths = ['lib']
+
+  s.add_dependency 'execjs', '~> 2.7'
 
   s.add_development_dependency 'bundler', '~> 1.13'
   s.add_development_dependency 'rake', '~> 10.0'
