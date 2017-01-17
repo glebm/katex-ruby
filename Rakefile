@@ -39,13 +39,16 @@ task :update, :version do |_task, args| # rubocop:disable Metrics/BlockLength
   FileUtils.cp File.join(katex_path, 'katex.min.css'),
                File.join(assets_path, 'stylesheets', 'katex.css')
 
-  # Create an sprockets version of katex CSS that is a Sass file that
-  # uses asset-path for referencing fonts.
+  # Create sprockets versions of katex CSS that use asset-path for referencing
+  # fonts. One is a Sass version and the other one is .css.erb.
   sprockets_css_path = File.join(assets_path, 'sprockets', 'stylesheets')
   FileUtils.mkdir_p sprockets_css_path
-  File.write(File.join(sprockets_css_path, 'katex.scss'),
-             File.read(File.join(katex_path, 'katex.css'))
-                 .gsub(%r{url\((['"]?)fonts/}, 'asset-path(\1'))
+  katex_css = File.read(File.join(katex_path, 'katex.css'))
+  File.write(File.join(sprockets_css_path, '_katex.scss'),
+             katex_css.gsub(%r{url\((['"]?)fonts/}, 'asset-path(\1'))
+  File.write(File.join(sprockets_css_path, 'katex.css.erb'),
+             katex_css.gsub(%r{url\(['"]?fonts/(.*?)['"]?\)},
+                            "<%= asset_path('\\1') %>"))
 
   # Update KATEX_VERSION in version.rb
   File.write('lib/katex/version.rb',
