@@ -9,8 +9,27 @@ module Katex
   @context = nil
 
   class << self
-    def render(math)
-      katex_context.call 'katex.renderToString', math
+    # Renders the given math expression to HTML via katex.renderToString.
+    #
+    # @param math [String] The math (Latex) expression
+    # @param display_mode [Boolean] Whether to render in display mode.
+    # @param throw_on_error [Boolean] Whether to raise on error. If false,
+    #   renders the error message instead.
+    # @param render_options [Hash] Additional options for katex.renderToString.
+    #   See https://github.com/Khan/KaTeX#rendering-options.
+    # @return [String] HTML. If strings respond to html_safe, the result will be
+    #   HTML-safe.
+    def render(math, display_mode: false, throw_on_error: false,
+               **render_options)
+      result = katex_context.call(
+        'katex.renderToString',
+        math,
+        displayMode: display_mode,
+        throwOnError: throw_on_error,
+        **render_options
+      )
+      result = result.html_safe if result.respond_to?(:html_safe)
+      result
     end
 
     def katex_context
