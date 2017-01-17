@@ -28,6 +28,8 @@ Katex.render 'c = \\pm\\sqrt{a^2 + b^2}'
 #=> "<span class=\"katex\">..."
 ```
 
+If you're on Rails, the result is marked as `html_safe`.
+
 ### Assets
 
 For this rendered math to look nice, you will also need to include KaTeX CSS
