@@ -4,7 +4,7 @@ require 'rspec/core/rake_task'
 
 RSpec::Core::RakeTask.new(:spec)
 
-task :update, :version do |_task, args|
+task :update, :version do |_task, args| # rubocop:disable Metrics/BlockLength
   require 'fileutils'
   require 'open-uri'
 
