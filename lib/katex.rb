@@ -19,6 +19,8 @@ module Katex
     #   See https://github.com/Khan/KaTeX#rendering-options.
     # @return [String] HTML. If strings respond to html_safe, the result will be
     #   HTML-safe.
+    # @note This method is thread-safe as long as your ExecJS runtime is
+    #   thread-safe. MiniRacer is the recommended runtime.
     def render(math, display_mode: false, throw_on_error: false,
                **render_options)
       result = katex_context.call(

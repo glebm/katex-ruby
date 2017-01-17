@@ -7,8 +7,9 @@ module Katex
         %w(fonts javascripts).each do |sub|
           app.config.assets.paths << root.join('vendor', 'assets', sub).to_s
         end
-        # Registers an sprockets version of the katex CSS that is a Sass file
-        # that uses asset-path for referencing the fonts.
+        # Create sprockets versions of katex CSS that use asset-path for
+        # referencing fonts.
+        # One file is a Sass partial and the other one is .css.erb.
         app.config.assets.paths << root.join(
           'vendor', 'assets', 'sprockets', 'stylesheets'
         ).to_s
