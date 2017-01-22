@@ -4,6 +4,7 @@ require 'rspec/core/rake_task'
 
 RSpec::Core::RakeTask.new(:spec)
 
+desc 'Update KaTeX from GitHub releases'
 task :update, :version do |_task, args| # rubocop:disable Metrics/BlockLength
   require 'fileutils'
   require 'open-uri'
@@ -28,7 +29,7 @@ task :update, :version do |_task, args| # rubocop:disable Metrics/BlockLength
   end
 
   # Copy assets
-  assets_path = File.join('vendor', 'assets')
+  assets_path = File.join('vendor', 'katex')
   FileUtils.rmdir assets_path
   FileUtils.mkdir_p assets_path
   FileUtils.cp_r File.join(katex_path, 'fonts'), assets_path
@@ -45,10 +46,11 @@ task :update, :version do |_task, args| # rubocop:disable Metrics/BlockLength
   FileUtils.mkdir_p sprockets_css_path
   katex_css = File.read(File.join(katex_path, 'katex.css'))
   File.write(File.join(sprockets_css_path, '_katex.scss'),
-             katex_css.gsub(%r{url\((['"]?)fonts/}, 'asset-path(\1'))
+             katex_css.gsub(%r{url\((['"]?)fonts/([^)]*\))},
+                            'url(asset-path(\1\2)'))
   File.write(File.join(sprockets_css_path, 'katex.css.erb'),
              katex_css.gsub(%r{url\(['"]?fonts/(.*?)['"]?\)},
-                            "<%= asset_path('\\1') %>"))
+                            "url(<%= asset_path('\\1') %>)"))
 
   # Update KATEX_VERSION in version.rb
   File.write('lib/katex/version.rb',
