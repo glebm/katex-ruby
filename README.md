@@ -8,7 +8,7 @@ It uses [ExecJS] under the hood.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'katex', '~> 0.1.0'
+gem 'katex', '~> 0.1.1'
 ```
 
 And then execute:
@@ -29,6 +29,18 @@ Katex.render 'c = \\pm\\sqrt{a^2 + b^2}'
 ```
 
 If you're on Rails, the result is marked as `html_safe`.
+
+Any error in the markup is raised by default. To avoid this and render error
+text instead, pass `throw_on_error: false`:
+
+```ruby
+Katex.render '\\', throw_on_error: false
+```
+
+Note that this will catch even `ParseError`s (unlike native KaTeX).
+
+Learn more about all the available options in the
+[documentation](http://www.rubydoc.info/gems/katex/Katex#render-class_method).
 
 ### Assets
 
