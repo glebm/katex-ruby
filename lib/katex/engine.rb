@@ -13,7 +13,7 @@ module Katex
       # referencing fonts.
       # One file is a Sass partial and the other one is .css.erb.
       app.config.assets.paths << root.join(
-          'vendor', 'katex', 'sprockets', 'stylesheets'
+        'vendor', 'katex', 'sprockets', 'stylesheets'
       ).to_s
     end
   end

@@ -24,34 +24,23 @@ module Katex
     #   HTML-safe.
     # @note This method is thread-safe as long as your ExecJS runtime is
     #   thread-safe. MiniRacer is the recommended runtime.
+    # rubocop:disable Metrics/MethodLength,Metrics/ParameterLists
     def render(math, display_mode: false, throw_on_error: true,
                error_color: '#cc0000', macros: {}, **render_options)
-      begin
-        result = katex_context.call(
-            'katex.renderToString',
-            math,
-            displayMode: display_mode,
-            throwOnError: throw_on_error,
-            errorColor: error_color,
-            macros: macros,
-            **render_options
-        )
-      rescue ExecJS::ProgramError => e
-        raise e if throw_on_error
-        result = <<~HTML
-          <span class='katex'>
-            <span class='katex-html'>
-              <span style='color: #{error_color}'>
-                #{ERB::Util.h e.message.sub(/^ParseError: /, '')}
-              </span>
-            </span>
-          </span>
-        HTML
-      end
-
-      result = result.html_safe if result.respond_to?(:html_safe)
-      result
+      maybe_html_safe katex_context.call(
+        'katex.renderToString',
+        math,
+        displayMode: display_mode,
+        throwOnError: throw_on_error,
+        errorColor: error_color,
+        macros: macros,
+        **render_options
+      )
+    rescue ExecJS::ProgramError => e
+      raise e if throw_on_error
+      render_exception e
     end
+    # rubocop:enable Metrics/MethodLength,Metrics/ParameterLists
 
     def katex_context
       @load_context_mutex.synchronize do
@@ -67,6 +56,28 @@ module Katex
     def gem_path
       @gem_path ||=
         File.expand_path(File.join(File.dirname(__FILE__), '..'))
+    end
+
+    private
+
+    def render_exception(e)
+      maybe_html_safe <<~HTML
+        <span class='katex'>
+          <span class='katex-html'>
+            <span style='color: #{error_color}'>
+              #{ERB::Util.h e.message.sub(/^ParseError: /, '')}
+            </span>
+          </span>
+        </span>
+      HTML
+    end
+
+    def maybe_html_safe(html)
+      if html.respond_to?(:html_safe)
+        html.html_safe
+      else
+        html
+      end
     end
   end
 end
