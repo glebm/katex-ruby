@@ -51,7 +51,7 @@ I recommend you use the CSS bundled with this gem, to ensure version
 compatibility.
 
 If you use Rails, the assets are registered automatically and you simply need
-to `//= require katex` if you use CSS or `@import "katex"` if you use Sass.
+to `//= require katex` if you use CSS or `@import "_katex"` if you use Sass.
 
 You can also `//= require katex` in your JS to access the KaTeX renderer in the
 browser.
