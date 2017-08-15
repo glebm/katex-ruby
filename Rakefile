@@ -33,6 +33,7 @@ task :update, :version do |_task, args| # rubocop:disable Metrics/BlockLength
   FileUtils.rmdir assets_path
   FileUtils.mkdir_p assets_path
   FileUtils.cp_r File.join(katex_path, 'fonts'), assets_path
+  FileUtils.cp_r File.join(katex_path, 'images'), assets_path
   FileUtils.mkdir_p File.join(assets_path, 'javascripts')
   FileUtils.cp File.join(katex_path, 'katex.min.js'),
                File.join(assets_path, 'javascripts', 'katex.js')
@@ -45,12 +46,11 @@ task :update, :version do |_task, args| # rubocop:disable Metrics/BlockLength
   sprockets_css_path = File.join(assets_path, 'sprockets', 'stylesheets')
   FileUtils.mkdir_p sprockets_css_path
   katex_css = File.read(File.join(katex_path, 'katex.css'))
+  asset_url_regex = %r{url\(['"]?(?:fonts|images)/([^'")]*)['")]*}
   File.write(File.join(sprockets_css_path, '_katex.scss'),
-             katex_css.gsub(%r{url\((['"]?)fonts/([^)]*\))},
-                            'url(asset-path(\1\2)'))
+             katex_css.gsub(asset_url_regex, "url(asset-path('\\1'))"))
   File.write(File.join(sprockets_css_path, 'katex.css.erb'),
-             katex_css.gsub(%r{url\(['"]?fonts/(.*?)['"]?\)},
-                            "url(<%= asset_path('\\1') %>)"))
+             katex_css.gsub(asset_url_regex, "url(<%= asset_path('\\1') %>)"))
 
   # Update KATEX_VERSION in version.rb
   File.write('lib/katex/version.rb',
