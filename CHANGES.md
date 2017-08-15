@@ -1,3 +1,7 @@
+# v0.2.2
+
+* Fixes error rendering.
+
 # v0.2.1
 
 * Adds `vendor/images` to asset lookup path.
