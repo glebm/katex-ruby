@@ -1,3 +1,7 @@
+# v0.2.0
+
+* Updates KaTeX to v0.8.1.
+
 # v0.1.1
 
 * Changes the default for `throw_on_error` to `true` to align with KaTeX native.
