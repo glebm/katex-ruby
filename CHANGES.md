@@ -1,3 +1,7 @@
+# v0.2.1
+
+* Adds `vendor/images` to asset lookup path.
+
 # v0.2.0
 
 * Updates KaTeX to v0.8.1.
