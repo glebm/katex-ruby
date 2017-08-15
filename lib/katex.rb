@@ -38,7 +38,7 @@ module Katex
       )
     rescue ExecJS::ProgramError => e
       raise e if throw_on_error
-      render_exception e
+      render_exception e, error_color
     end
     # rubocop:enable Metrics/MethodLength,Metrics/ParameterLists
 
@@ -60,7 +60,7 @@ module Katex
 
     private
 
-    def render_exception(e)
+    def render_exception(e, error_color)
       maybe_html_safe <<~HTML
         <span class='katex'>
           <span class='katex-html'>
