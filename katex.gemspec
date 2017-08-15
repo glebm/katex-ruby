@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'katex/version'
@@ -16,7 +17,7 @@ Gem::Specification.new do |s|
 
   s.required_ruby_version = '~> 2.3'
 
-  s.files = Dir['{exe,lib,vendor}/**/*'] + %w(LICENSE.txt README.md)
+  s.files = Dir['{exe,lib,vendor}/**/*'] + %w[LICENSE.txt README.md]
   s.bindir = 'exe'
   s.executables = s.files.grep(%r{^exe/}) { |f| File.basename(f) }
   s.require_paths = ['lib']

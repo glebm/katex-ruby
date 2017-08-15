@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'katex/version'
 require 'katex/engine' if defined?(Rails)
 require 'execjs'
