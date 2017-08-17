@@ -2,5 +2,5 @@
 
 module Katex
   VERSION = '0.2.2'
-  KATEX_VERSION = 'v0.8.1'
+  KATEX_VERSION = 'v0.8.2'
 end
