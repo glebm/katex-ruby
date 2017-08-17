@@ -1,5 +1,9 @@
 # v0.2.2
 
+* Updates KaTeX to v0.8.2.
+
+# v0.2.2
+
 * Fixes error rendering.
 
 # v0.2.1
