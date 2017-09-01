@@ -31,10 +31,12 @@ task :update, :version do |_task, args| # rubocop:disable Metrics/BlockLength
 
   # Copy assets
   assets_path = File.join('vendor', 'katex')
-  FileUtils.rmdir assets_path
+  FileUtils.rm_rf assets_path
   FileUtils.mkdir_p assets_path
   FileUtils.cp_r File.join(katex_path, 'fonts'), assets_path
-  FileUtils.cp_r File.join(katex_path, 'images'), assets_path
+  if File.directory? File.join(katex_path, 'images')
+    FileUtils.cp_r File.join(katex_path, 'images'), assets_path
+  end
   FileUtils.mkdir_p File.join(assets_path, 'javascripts')
   FileUtils.cp File.join(katex_path, 'katex.min.js'),
                File.join(assets_path, 'javascripts', 'katex.js')

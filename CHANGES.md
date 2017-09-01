@@ -1,3 +1,7 @@
+# v0.3.0
+
+* Updates KaTeX to v0.8.3.
+
 # v0.2.2
 
 * Updates KaTeX to v0.8.2.

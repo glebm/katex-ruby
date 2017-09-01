@@ -6,9 +6,10 @@ module Katex
     initializer 'katex.assets' do |app|
       # We deliberately do not place the assets in vendor/assets but in
       # vendor/katex instead, as vendor/assets is added to asset paths
-      # by default but have to avoid including the non-sprockets stylesheet.
+      # by default but we have to avoid including the non-sprockets stylesheet.
       %w[fonts javascripts images].each do |sub|
-        app.config.assets.paths << root.join('vendor', 'katex', sub).to_s
+        path = root.join('vendor', 'katex', sub).to_s
+        app.config.assets.paths << path if File.directory?(path)
       end
       # Use sprockets versions of katex CSS that use asset-path for
       # referencing fonts.
