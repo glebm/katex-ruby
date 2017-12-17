@@ -374,7 +374,20 @@
 .katex .mfrac .frac-line {
   display: inline-block;
   width: 100%;
-  border-bottom-style: solid;
+}
+@media screen {
+  .katex .mfrac .frac-line,
+  .katex .overline .overline-line,
+  .katex .underline .underline-line {
+    min-height: 1px;
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi) {
+  .katex .mfrac .frac-line,
+  .katex .overline .overline-line,
+  .katex .underline .underline-line {
+    min-height: 0.5px;
+  }
 }
 .katex .mspace {
   display: inline-block;
@@ -413,23 +426,31 @@
   width: 2em;
 }
 .katex .llap,
-.katex .rlap {
+.katex .rlap,
+.katex .clap {
   width: 0;
   position: relative;
 }
 .katex .llap > .inner,
-.katex .rlap > .inner {
+.katex .rlap > .inner,
+.katex .clap > .inner {
   position: absolute;
 }
 .katex .llap > .fix,
-.katex .rlap > .fix {
+.katex .rlap > .fix,
+.katex .clap > .fix {
   display: inline-block;
 }
 .katex .llap > .inner {
   right: 0;
 }
-.katex .rlap > .inner {
+.katex .rlap > .inner,
+.katex .clap > .inner {
   left: 0;
+}
+.katex .clap > .inner > span {
+  margin-left: -50%;
+  margin-right: 50%;
 }
 .katex .katex-logo .a {
   font-size: 0.75em;
@@ -457,7 +478,6 @@
 .katex .underline .underline-line {
   display: inline-block;
   width: 100%;
-  border-bottom-style: solid;
 }
 .katex .sqrt > .root {
   margin-left: 0.27777778em;
@@ -1005,7 +1025,17 @@
 .katex .mtable .vertical-separator {
   display: inline-block;
   margin: 0 -0.025em;
-  border-right: 0.05em solid black;
+  width: 0.05em;
+}
+@media screen {
+  .katex .mtable .vertical-separator {
+    min-width: 1px;
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi) {
+  .katex .mtable .vertical-separator {
+    min-width: 0.5px;
+  }
 }
 .katex .mtable .arraycolsep {
   display: inline-block;
@@ -1041,6 +1071,41 @@
 .katex .stretchy:after {
   content: "";
 }
+.katex .hide-tail {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.katex .halfarrow-left {
+  position: absolute;
+  left: 0;
+  width: 50.1%;
+  overflow: hidden;
+}
+.katex .halfarrow-right {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  overflow: hidden;
+}
+.katex .brace-left {
+  position: absolute;
+  left: 0;
+  width: 25.1%;
+  overflow: hidden;
+}
+.katex .brace-center {
+  position: absolute;
+  left: 25%;
+  width: 50%;
+  overflow: hidden;
+}
+.katex .brace-right {
+  position: absolute;
+  right: 0;
+  width: 25.1%;
+  overflow: hidden;
+}
 .katex .x-arrow-pad {
   padding: 0 0.5em;
 }
@@ -1055,6 +1120,10 @@
 .katex .fbox {
   box-sizing: border-box;
   border: 0.04em solid black;
+}
+.katex .fcolorbox {
+  box-sizing: border-box;
+  border: 0.04em solid;
 }
 .katex .cancel-pad {
   padding: 0 0.2em 0 0.2em;
