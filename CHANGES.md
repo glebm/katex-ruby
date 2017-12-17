@@ -1,12 +1,13 @@
-# v0.4.0 (unreleased)
+# Master (unreleased)
 
 * Automatic assets registration for Hanami and Sprockets without Rails.
+* KaTeX v0.9.0-alpha2.
 
 # v0.3.0
 
 * Updates KaTeX to v0.8.3.
 
-# v0.2.2
+# v0.2.3
 
 * Updates KaTeX to v0.8.2.
 
