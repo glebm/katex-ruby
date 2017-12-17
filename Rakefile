@@ -13,7 +13,7 @@ task :update, :version do |_task, args| # rubocop:disable Metrics/BlockLength
   # Download KaTeX
   version = args[:version]
   unless version
-    $stderr.puts 'Specify KaTeX version, e.g. rake update[v0.7.0]'
+    warn 'Specify KaTeX version, e.g. rake update[v0.7.0]'
     exit 64
   end
   dl_path = File.join('tmp', 'katex-dl', version)
