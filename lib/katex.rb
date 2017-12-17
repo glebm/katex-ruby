@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'katex/version'
-require 'katex/engine' if defined?(Rails)
 require 'execjs'
 require 'erb'
 
@@ -80,5 +79,20 @@ module Katex
         html
       end
     end
+  end
+end
+
+if defined?(::Rails)
+  require 'katex/engine'
+else
+  assets_path = File.join(Katex.gem_path, 'vendor', 'katex')
+  if defined?(::Sprockets)
+    %w[fonts javascripts images].each do |subdirectory|
+      path = File.join(assets_path, subdirectory)
+      Sprockets.append_path(path) if File.directory?(path)
+    end
+    Sprockets.append_path(File.join(assets_path, 'sprockets', 'stylesheets'))
+  elsif defined?(::Hanami)
+    Hanami::Assets.sources << assets_path
   end
 end

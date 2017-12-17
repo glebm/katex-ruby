@@ -1,3 +1,7 @@
+# v0.4.0 (unreleased)
+
+* Automatic assets registration for Hanami and Sprockets without Rails.
+
 # v0.3.0
 
 * Updates KaTeX to v0.8.3.
