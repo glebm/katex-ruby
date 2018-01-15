@@ -1,112 +1,96 @@
 @font-face {
   font-family: 'KaTeX_AMS';
-  src: url(asset-path('KaTeX_AMS-Regular.eot'));
-  src: url(asset-path('KaTeX_AMS-Regular.eot#iefix')) format('embedded-opentype'), url(asset-path('KaTeX_AMS-Regular.woff2')) format('woff2'), url(asset-path('KaTeX_AMS-Regular.woff')) format('woff'), url(asset-path('KaTeX_AMS-Regular.ttf')) format('truetype');
+  src: url(asset-path('KaTeX_AMS-Regular.woff2')) format('woff2'), url(asset-path('KaTeX_AMS-Regular.woff')) format('woff'), url(asset-path('KaTeX_AMS-Regular.ttf')) format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'KaTeX_Caligraphic';
-  src: url(asset-path('KaTeX_Caligraphic-Bold.eot'));
-  src: url(asset-path('KaTeX_Caligraphic-Bold.eot#iefix')) format('embedded-opentype'), url(asset-path('KaTeX_Caligraphic-Bold.woff2')) format('woff2'), url(asset-path('KaTeX_Caligraphic-Bold.woff')) format('woff'), url(asset-path('KaTeX_Caligraphic-Bold.ttf')) format('truetype');
+  src: url(asset-path('KaTeX_Caligraphic-Bold.woff2')) format('woff2'), url(asset-path('KaTeX_Caligraphic-Bold.woff')) format('woff'), url(asset-path('KaTeX_Caligraphic-Bold.ttf')) format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: 'KaTeX_Caligraphic';
-  src: url(asset-path('KaTeX_Caligraphic-Regular.eot'));
-  src: url(asset-path('KaTeX_Caligraphic-Regular.eot#iefix')) format('embedded-opentype'), url(asset-path('KaTeX_Caligraphic-Regular.woff2')) format('woff2'), url(asset-path('KaTeX_Caligraphic-Regular.woff')) format('woff'), url(asset-path('KaTeX_Caligraphic-Regular.ttf')) format('truetype');
+  src: url(asset-path('KaTeX_Caligraphic-Regular.woff2')) format('woff2'), url(asset-path('KaTeX_Caligraphic-Regular.woff')) format('woff'), url(asset-path('KaTeX_Caligraphic-Regular.ttf')) format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'KaTeX_Fraktur';
-  src: url(asset-path('KaTeX_Fraktur-Bold.eot'));
-  src: url(asset-path('KaTeX_Fraktur-Bold.eot#iefix')) format('embedded-opentype'), url(asset-path('KaTeX_Fraktur-Bold.woff2')) format('woff2'), url(asset-path('KaTeX_Fraktur-Bold.woff')) format('woff'), url(asset-path('KaTeX_Fraktur-Bold.ttf')) format('truetype');
+  src: url(asset-path('KaTeX_Fraktur-Bold.woff2')) format('woff2'), url(asset-path('KaTeX_Fraktur-Bold.woff')) format('woff'), url(asset-path('KaTeX_Fraktur-Bold.ttf')) format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: 'KaTeX_Fraktur';
-  src: url(asset-path('KaTeX_Fraktur-Regular.eot'));
-  src: url(asset-path('KaTeX_Fraktur-Regular.eot#iefix')) format('embedded-opentype'), url(asset-path('KaTeX_Fraktur-Regular.woff2')) format('woff2'), url(asset-path('KaTeX_Fraktur-Regular.woff')) format('woff'), url(asset-path('KaTeX_Fraktur-Regular.ttf')) format('truetype');
+  src: url(asset-path('KaTeX_Fraktur-Regular.woff2')) format('woff2'), url(asset-path('KaTeX_Fraktur-Regular.woff')) format('woff'), url(asset-path('KaTeX_Fraktur-Regular.ttf')) format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'KaTeX_Main';
-  src: url(asset-path('KaTeX_Main-Bold.eot'));
-  src: url(asset-path('KaTeX_Main-Bold.eot#iefix')) format('embedded-opentype'), url(asset-path('KaTeX_Main-Bold.woff2')) format('woff2'), url(asset-path('KaTeX_Main-Bold.woff')) format('woff'), url(asset-path('KaTeX_Main-Bold.ttf')) format('truetype');
+  src: url(asset-path('KaTeX_Main-Bold.woff2')) format('woff2'), url(asset-path('KaTeX_Main-Bold.woff')) format('woff'), url(asset-path('KaTeX_Main-Bold.ttf')) format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: 'KaTeX_Main';
-  src: url(asset-path('KaTeX_Main-Italic.eot'));
-  src: url(asset-path('KaTeX_Main-Italic.eot#iefix')) format('embedded-opentype'), url(asset-path('KaTeX_Main-Italic.woff2')) format('woff2'), url(asset-path('KaTeX_Main-Italic.woff')) format('woff'), url(asset-path('KaTeX_Main-Italic.ttf')) format('truetype');
+  src: url(asset-path('KaTeX_Main-Italic.woff2')) format('woff2'), url(asset-path('KaTeX_Main-Italic.woff')) format('woff'), url(asset-path('KaTeX_Main-Italic.ttf')) format('truetype');
   font-weight: normal;
   font-style: italic;
 }
 @font-face {
   font-family: 'KaTeX_Main';
-  src: url(asset-path('KaTeX_Main-Regular.eot'));
-  src: url(asset-path('KaTeX_Main-Regular.eot#iefix')) format('embedded-opentype'), url(asset-path('KaTeX_Main-Regular.woff2')) format('woff2'), url(asset-path('KaTeX_Main-Regular.woff')) format('woff'), url(asset-path('KaTeX_Main-Regular.ttf')) format('truetype');
+  src: url(asset-path('KaTeX_Main-Regular.woff2')) format('woff2'), url(asset-path('KaTeX_Main-Regular.woff')) format('woff'), url(asset-path('KaTeX_Main-Regular.ttf')) format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'KaTeX_Math';
-  src: url(asset-path('KaTeX_Math-Italic.eot'));
-  src: url(asset-path('KaTeX_Math-Italic.eot#iefix')) format('embedded-opentype'), url(asset-path('KaTeX_Math-Italic.woff2')) format('woff2'), url(asset-path('KaTeX_Math-Italic.woff')) format('woff'), url(asset-path('KaTeX_Math-Italic.ttf')) format('truetype');
+  src: url(asset-path('KaTeX_Math-Italic.woff2')) format('woff2'), url(asset-path('KaTeX_Math-Italic.woff')) format('woff'), url(asset-path('KaTeX_Math-Italic.ttf')) format('truetype');
   font-weight: normal;
   font-style: italic;
 }
 @font-face {
   font-family: 'KaTeX_SansSerif';
-  src: url(asset-path('KaTeX_SansSerif-Regular.eot'));
-  src: url(asset-path('KaTeX_SansSerif-Regular.eot#iefix')) format('embedded-opentype'), url(asset-path('KaTeX_SansSerif-Regular.woff2')) format('woff2'), url(asset-path('KaTeX_SansSerif-Regular.woff')) format('woff'), url(asset-path('KaTeX_SansSerif-Regular.ttf')) format('truetype');
+  src: url(asset-path('KaTeX_SansSerif-Regular.woff2')) format('woff2'), url(asset-path('KaTeX_SansSerif-Regular.woff')) format('woff'), url(asset-path('KaTeX_SansSerif-Regular.ttf')) format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'KaTeX_Script';
-  src: url(asset-path('KaTeX_Script-Regular.eot'));
-  src: url(asset-path('KaTeX_Script-Regular.eot#iefix')) format('embedded-opentype'), url(asset-path('KaTeX_Script-Regular.woff2')) format('woff2'), url(asset-path('KaTeX_Script-Regular.woff')) format('woff'), url(asset-path('KaTeX_Script-Regular.ttf')) format('truetype');
+  src: url(asset-path('KaTeX_Script-Regular.woff2')) format('woff2'), url(asset-path('KaTeX_Script-Regular.woff')) format('woff'), url(asset-path('KaTeX_Script-Regular.ttf')) format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'KaTeX_Size1';
-  src: url(asset-path('KaTeX_Size1-Regular.eot'));
-  src: url(asset-path('KaTeX_Size1-Regular.eot#iefix')) format('embedded-opentype'), url(asset-path('KaTeX_Size1-Regular.woff2')) format('woff2'), url(asset-path('KaTeX_Size1-Regular.woff')) format('woff'), url(asset-path('KaTeX_Size1-Regular.ttf')) format('truetype');
+  src: url(asset-path('KaTeX_Size1-Regular.woff2')) format('woff2'), url(asset-path('KaTeX_Size1-Regular.woff')) format('woff'), url(asset-path('KaTeX_Size1-Regular.ttf')) format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'KaTeX_Size2';
-  src: url(asset-path('KaTeX_Size2-Regular.eot'));
-  src: url(asset-path('KaTeX_Size2-Regular.eot#iefix')) format('embedded-opentype'), url(asset-path('KaTeX_Size2-Regular.woff2')) format('woff2'), url(asset-path('KaTeX_Size2-Regular.woff')) format('woff'), url(asset-path('KaTeX_Size2-Regular.ttf')) format('truetype');
+  src: url(asset-path('KaTeX_Size2-Regular.woff2')) format('woff2'), url(asset-path('KaTeX_Size2-Regular.woff')) format('woff'), url(asset-path('KaTeX_Size2-Regular.ttf')) format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'KaTeX_Size3';
-  src: url(asset-path('KaTeX_Size3-Regular.eot'));
-  src: url(asset-path('KaTeX_Size3-Regular.eot#iefix')) format('embedded-opentype'), url(asset-path('KaTeX_Size3-Regular.woff2')) format('woff2'), url(asset-path('KaTeX_Size3-Regular.woff')) format('woff'), url(asset-path('KaTeX_Size3-Regular.ttf')) format('truetype');
+  src: url(asset-path('KaTeX_Size3-Regular.woff2')) format('woff2'), url(asset-path('KaTeX_Size3-Regular.woff')) format('woff'), url(asset-path('KaTeX_Size3-Regular.ttf')) format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'KaTeX_Size4';
-  src: url(asset-path('KaTeX_Size4-Regular.eot'));
-  src: url(asset-path('KaTeX_Size4-Regular.eot#iefix')) format('embedded-opentype'), url(asset-path('KaTeX_Size4-Regular.woff2')) format('woff2'), url(asset-path('KaTeX_Size4-Regular.woff')) format('woff'), url(asset-path('KaTeX_Size4-Regular.ttf')) format('truetype');
+  src: url(asset-path('KaTeX_Size4-Regular.woff2')) format('woff2'), url(asset-path('KaTeX_Size4-Regular.woff')) format('woff'), url(asset-path('KaTeX_Size4-Regular.ttf')) format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'KaTeX_Typewriter';
-  src: url(asset-path('KaTeX_Typewriter-Regular.eot'));
-  src: url(asset-path('KaTeX_Typewriter-Regular.eot#iefix')) format('embedded-opentype'), url(asset-path('KaTeX_Typewriter-Regular.woff2')) format('woff2'), url(asset-path('KaTeX_Typewriter-Regular.woff')) format('woff'), url(asset-path('KaTeX_Typewriter-Regular.ttf')) format('truetype');
+  src: url(asset-path('KaTeX_Typewriter-Regular.woff2')) format('woff2'), url(asset-path('KaTeX_Typewriter-Regular.woff')) format('woff'), url(asset-path('KaTeX_Typewriter-Regular.ttf')) format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -148,19 +132,36 @@
 .katex .strut {
   display: inline-block;
 }
-.katex .mathrm {
-  font-style: normal;
+.katex .textbf {
+  font-weight: bold;
 }
 .katex .textit {
   font-style: italic;
+}
+.katex .textrm {
+  font-family: KaTeX_Main;
+}
+.katex .textsf {
+  font-family: KaTeX_SansSerif;
+}
+.katex .texttt {
+  font-family: KaTeX_Typewriter;
 }
 .katex .mathit {
   font-family: KaTeX_Math;
   font-style: italic;
 }
+.katex .mathrm {
+  font-style: normal;
+}
 .katex .mathbf {
   font-family: KaTeX_Main;
   font-weight: bold;
+}
+.katex .boldsymbol {
+  font-family: KaTeX_Math;
+  font-weight: bold;
+  font-style: italic;
 }
 .katex .amsrm {
   font-family: KaTeX_AMS;
@@ -375,25 +376,14 @@
   display: inline-block;
   width: 100%;
 }
-@media screen {
-  .katex .mfrac .frac-line,
-  .katex .overline .overline-line,
-  .katex .underline .underline-line {
-    min-height: 1px;
-  }
-}
-@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi) {
-  .katex .mfrac .frac-line,
-  .katex .overline .overline-line,
-  .katex .underline .underline-line {
-    min-height: 0.5px;
-  }
-}
 .katex .mspace {
   display: inline-block;
 }
 .katex .mspace.negativethinspace {
   margin-left: -0.16667em;
+}
+.katex .mspace.muspace {
+  width: 0.055556em;
 }
 .katex .mspace.thinspace {
   width: 0.16667em;
@@ -451,23 +441,6 @@
 .katex .clap > .inner > span {
   margin-left: -50%;
   margin-right: 50%;
-}
-.katex .katex-logo .a {
-  font-size: 0.75em;
-  margin-left: -0.32em;
-  position: relative;
-  top: -0.2em;
-}
-.katex .katex-logo .t {
-  margin-left: -0.23em;
-}
-.katex .katex-logo .e {
-  margin-left: -0.1667em;
-  position: relative;
-  top: 0.2155em;
-}
-.katex .katex-logo .x {
-  margin-left: -0.125em;
 }
 .katex .rule {
   display: inline-block;
@@ -1011,31 +984,17 @@
 .katex .accent > .vlist-t {
   text-align: center;
 }
-.katex .accent .accent-body > span {
+.katex .accent .accent-body {
   width: 0;
-}
-.katex .accent .accent-body.accent-vec > span {
   position: relative;
-  left: 0.326em;
 }
-.katex .accent .accent-body.accent-hungarian > span {
-  position: relative;
-  left: 0.250em;
+.katex .overlay {
+  display: block;
 }
 .katex .mtable .vertical-separator {
   display: inline-block;
-  margin: 0 -0.025em;
-  width: 0.05em;
-}
-@media screen {
-  .katex .mtable .vertical-separator {
-    min-width: 1px;
-  }
-}
-@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi) {
-  .katex .mtable .vertical-separator {
-    min-width: 0.5px;
-  }
+  margin: 0 -0.125em;
+  width: 0.25em;
 }
 .katex .mtable .arraycolsep {
   display: inline-block;
@@ -1062,6 +1021,9 @@
 }
 .katex svg line {
   stroke: currentColor;
+}
+.katex .vertical-separator svg {
+  width: 0.25em;
 }
 .katex .stretchy {
   width: 100%;
