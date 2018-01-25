@@ -50,26 +50,37 @@ into the webpage.
 I recommend you use the CSS bundled with this gem, to ensure version
 compatibility.
 
+#### Automatic registrations
+
 If you use Rails, Sprockets without Rails, or Hanami, the assets are registered
-automatically and you simply need to `//= require katex` if you use CSS
-or `@import "_katex"` if you use Sass.
+automatically.
+
+Simply `//= require katex` if you use CSS or `@import "_katex"` if you use Sass.
 
 You can also `//= require katex` in your JS to access the KaTeX renderer in the
 browser.
 
-If you don't use Rails, you can find the assets in the `vendor/assets`
-directory of the gem (`File.join(Katex.gem_path, 'vendor', 'assets')`).
+#### Manual registration
+
+The assets are located in the `vendor/assets` directory of the gem. The root
+path to the root directory of the gem is available via `Katex.gem_path`, e.g.:
+
+```ruby
+File.join(Katex.gem_path, 'vendor', 'assets')
+```
+
+### KaTeX version
+
+The version of KaTeX bundled with this gem is available via:
+
+```ruby
+Katex::KATEX_VERSION
+```
 
 ### Caching
 
 If you cache the output of `Katex.render`, make sure to use the KaTeX
 version in the cache key, as the output may change between versions.
-
-You can get the KaTeX version bundled with this gem via:
-
-```ruby
-Katex::KATEX_VERSION
-```
 
 ## Development
 
