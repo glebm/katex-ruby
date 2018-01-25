@@ -8,6 +8,7 @@ require 'erb'
 module Katex
   @load_context_mutex = Mutex.new
   @context = nil
+  @execjs_runtime = -> { ExecJS.runtime }
 
   class << self
     # Renders the given math expression to HTML via katex.renderToString.
@@ -42,11 +43,15 @@ module Katex
     end
     # rubocop:enable Metrics/MethodLength,Metrics/ParameterLists
 
+    # The ExecJS runtime factory, default: `-> { ExecJS.runtime }`.
+    # Set this before calling any other methods to use a different runtime.
+    #
+    # This proc is guaranteed to be called at most once.
+    attr_accessor :execjs_runtime
+
     def katex_context
       @load_context_mutex.synchronize do
-        # Use `ExecJS::Runtimes.autodetect.compile` instead of `ExecJS.compile`
-        # to avoid forcing the global runtime onto the user.
-        @context ||= ExecJS::Runtimes.autodetect.compile File.read katex_js_path
+        @context ||= @execjs_runtime.call.compile File.read katex_js_path
       end
     end
 
