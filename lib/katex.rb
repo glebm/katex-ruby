@@ -44,7 +44,9 @@ module Katex
 
     def katex_context
       @load_context_mutex.synchronize do
-        @context ||= ExecJS.compile(File.read(katex_js_path))
+        # Use `ExecJS::Runtimes.autodetect.compile` instead of `ExecJS.compile`
+        # to avoid forcing the global runtime onto the user.
+        @context ||= ExecJS::Runtimes.autodetect.compile File.read katex_js_path
       end
     end
 

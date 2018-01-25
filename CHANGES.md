@@ -1,3 +1,7 @@
+# v0.4.1.beta
+
+* Avoid setting the global `ExecJS.runtime` when creating the context.
+
 # v0.4.0.beta
 
 * Automatic assets registration for Hanami and Sprockets without Rails.
