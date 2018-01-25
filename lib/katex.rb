@@ -11,6 +11,8 @@ module Katex
   @execjs_runtime = -> { ExecJS.runtime }
 
   class << self
+    # rubocop:disable Metrics/MethodLength,Metrics/ParameterLists
+
     # Renders the given math expression to HTML via katex.renderToString.
     #
     # @param math [String] The math (Latex) expression
@@ -25,7 +27,6 @@ module Katex
     #   HTML-safe.
     # @note This method is thread-safe as long as your ExecJS runtime is
     #   thread-safe. MiniRacer is the recommended runtime.
-    # rubocop:disable Metrics/MethodLength,Metrics/ParameterLists
     def render(math, display_mode: false, throw_on_error: true,
                error_color: '#cc0000', macros: {}, **render_options)
       maybe_html_safe katex_context.call(
