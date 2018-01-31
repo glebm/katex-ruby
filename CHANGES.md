@@ -1,3 +1,8 @@
+# v0.4.2.beta
+
+* Adds an option to provide a custom ExecJS runtime.
+* KaTeX v0.9.0-beta1
+
 # v0.4.1.beta
 
 * Avoid setting the global `ExecJS.runtime` when creating the context.
