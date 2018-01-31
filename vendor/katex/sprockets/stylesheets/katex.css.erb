@@ -36,6 +36,12 @@
 }
 @font-face {
   font-family: 'KaTeX_Main';
+  src: url(<%= asset_path('KaTeX_Main-BoldItalic.woff2') %>) format('woff2'), url(<%= asset_path('KaTeX_Main-BoldItalic.woff') %>) format('woff'), url(<%= asset_path('KaTeX_Main-BoldItalic.ttf') %>) format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'KaTeX_Main';
   src: url(<%= asset_path('KaTeX_Main-Italic.woff2') %>) format('woff2'), url(<%= asset_path('KaTeX_Main-Italic.woff') %>) format('woff'), url(<%= asset_path('KaTeX_Main-Italic.ttf') %>) format('truetype');
   font-weight: normal;
   font-style: italic;
@@ -49,6 +55,18 @@
 @font-face {
   font-family: 'KaTeX_Math';
   src: url(<%= asset_path('KaTeX_Math-Italic.woff2') %>) format('woff2'), url(<%= asset_path('KaTeX_Math-Italic.woff') %>) format('woff'), url(<%= asset_path('KaTeX_Math-Italic.ttf') %>) format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'KaTeX_SansSerif';
+  src: url(<%= asset_path('KaTeX_SansSerif-Bold.woff2') %>) format('woff2'), url(<%= asset_path('KaTeX_SansSerif-Bold.woff') %>) format('woff'), url(<%= asset_path('KaTeX_SansSerif-Bold.ttf') %>) format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KaTeX_SansSerif';
+  src: url(<%= asset_path('KaTeX_SansSerif-Italic.woff2') %>) format('woff2'), url(<%= asset_path('KaTeX_SansSerif-Italic.woff') %>) format('woff'), url(<%= asset_path('KaTeX_SansSerif-Italic.ttf') %>) format('truetype');
   font-weight: normal;
   font-style: italic;
 }
@@ -191,147 +209,6 @@
 .katex .mainrm {
   font-family: KaTeX_Main;
   font-style: normal;
-}
-.katex .mord + .mop {
-  margin-left: 0.16667em;
-}
-.katex .mord + .mbin {
-  margin-left: 0.22222em;
-}
-.katex .mord + .mrel {
-  margin-left: 0.27778em;
-}
-.katex .mord + .minner {
-  margin-left: 0.16667em;
-}
-.katex .mop + .mord {
-  margin-left: 0.16667em;
-}
-.katex .mop + .mop {
-  margin-left: 0.16667em;
-}
-.katex .mop + .mrel {
-  margin-left: 0.27778em;
-}
-.katex .mop + .minner {
-  margin-left: 0.16667em;
-}
-.katex .mbin + .mord {
-  margin-left: 0.22222em;
-}
-.katex .mbin + .mop {
-  margin-left: 0.22222em;
-}
-.katex .mbin + .mopen {
-  margin-left: 0.22222em;
-}
-.katex .mbin + .minner {
-  margin-left: 0.22222em;
-}
-.katex .mrel + .mord {
-  margin-left: 0.27778em;
-}
-.katex .mrel + .mop {
-  margin-left: 0.27778em;
-}
-.katex .mrel + .mopen {
-  margin-left: 0.27778em;
-}
-.katex .mrel + .minner {
-  margin-left: 0.27778em;
-}
-.katex .mclose + .mop {
-  margin-left: 0.16667em;
-}
-.katex .mclose + .mbin {
-  margin-left: 0.22222em;
-}
-.katex .mclose + .mrel {
-  margin-left: 0.27778em;
-}
-.katex .mclose + .minner {
-  margin-left: 0.16667em;
-}
-.katex .mpunct + .mord {
-  margin-left: 0.16667em;
-}
-.katex .mpunct + .mop {
-  margin-left: 0.16667em;
-}
-.katex .mpunct + .mrel {
-  margin-left: 0.16667em;
-}
-.katex .mpunct + .mopen {
-  margin-left: 0.16667em;
-}
-.katex .mpunct + .mclose {
-  margin-left: 0.16667em;
-}
-.katex .mpunct + .mpunct {
-  margin-left: 0.16667em;
-}
-.katex .mpunct + .minner {
-  margin-left: 0.16667em;
-}
-.katex .minner + .mord {
-  margin-left: 0.16667em;
-}
-.katex .minner + .mop {
-  margin-left: 0.16667em;
-}
-.katex .minner + .mbin {
-  margin-left: 0.22222em;
-}
-.katex .minner + .mrel {
-  margin-left: 0.27778em;
-}
-.katex .minner + .mopen {
-  margin-left: 0.16667em;
-}
-.katex .minner + .mpunct {
-  margin-left: 0.16667em;
-}
-.katex .minner + .minner {
-  margin-left: 0.16667em;
-}
-.katex .mord.mtight {
-  margin-left: 0;
-}
-.katex .mop.mtight {
-  margin-left: 0;
-}
-.katex .mbin.mtight {
-  margin-left: 0;
-}
-.katex .mrel.mtight {
-  margin-left: 0;
-}
-.katex .mopen.mtight {
-  margin-left: 0;
-}
-.katex .mclose.mtight {
-  margin-left: 0;
-}
-.katex .mpunct.mtight {
-  margin-left: 0;
-}
-.katex .minner.mtight {
-  margin-left: 0;
-}
-.katex .mord + .mop.mtight {
-  margin-left: 0.16667em;
-}
-.katex .mop + .mord.mtight {
-  margin-left: 0.16667em;
-}
-.katex .mop + .mop.mtight {
-  margin-left: 0.16667em;
-}
-.katex .mclose + .mop.mtight {
-  margin-left: 0.16667em;
-}
-.katex .minner + .mop.mtight {
-  margin-left: 0.16667em;
 }
 .katex .vlist-t {
   display: inline-table;
@@ -1015,12 +892,20 @@
   display: block;
   position: absolute;
   width: 100%;
+  fill: currentColor;
+  stroke: currentColor;
+  fill-rule: nonzero;
+  fill-opacity: 1;
+  stroke-width: 1;
+  stroke-linecap: butt;
+  stroke-linejoin: miter;
+  stroke-miterlimit: 4;
+  stroke-dasharray: none;
+  stroke-dashoffset: 0;
+  stroke-opacity: 1;
 }
 .katex svg path {
-  fill: currentColor;
-}
-.katex svg line {
-  stroke: currentColor;
+  stroke: none;
 }
 .katex .vertical-separator svg {
   width: 0.25em;
