@@ -1,3 +1,7 @@
+# v0.4.3
+
+* KaTeX v0.9.0
+
 # v0.4.2.beta
 
 * Adds an option to provide a custom ExecJS runtime.

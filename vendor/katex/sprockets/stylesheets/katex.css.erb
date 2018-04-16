@@ -872,6 +872,8 @@
   display: inline-block;
   margin: 0 -0.125em;
   width: 0.25em;
+  overflow: hidden;
+  position: relative;
 }
 .katex .mtable .arraycolsep {
   display: inline-block;
@@ -913,6 +915,8 @@
 .katex .stretchy {
   width: 100%;
   display: block;
+  position: relative;
+  overflow: hidden;
 }
 .katex .stretchy:before,
 .katex .stretchy:after {
@@ -926,13 +930,13 @@
 .katex .halfarrow-left {
   position: absolute;
   left: 0;
-  width: 50.1%;
+  width: 50.2%;
   overflow: hidden;
 }
 .katex .halfarrow-right {
   position: absolute;
   right: 0;
-  width: 50%;
+  width: 50.2%;
   overflow: hidden;
 }
 .katex .brace-left {
