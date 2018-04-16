@@ -68,12 +68,12 @@ module Katex
 
     private
 
-    def render_exception(e, error_color)
+    def render_exception(exception, error_color)
       maybe_html_safe <<~HTML
         <span class='katex'>
           <span class='katex-html'>
             <span style='color: #{error_color}'>
-              #{ERB::Util.h e.message.sub(/^ParseError: /, '')}
+              #{ERB::Util.h exception.message.sub(/^ParseError: /, '')}
             </span>
           </span>
         </span>

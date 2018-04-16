@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-lib = File.expand_path('../lib', __FILE__)
+lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'katex/version'
 
@@ -27,6 +27,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'bundler', '~> 1.13'
   s.add_development_dependency 'rake', '~> 10.0'
   s.add_development_dependency 'rspec', '~> 3.0'
-  s.add_development_dependency 'rubocop'
+  s.add_development_dependency 'rubocop', '>= 0.55.0'
   s.add_development_dependency 'simplecov'
 end
