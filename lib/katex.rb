@@ -40,6 +40,7 @@ module Katex
       )
     rescue ExecJS::ProgramError => e
       raise e if throw_on_error
+
       render_exception e, error_color
     end
     # rubocop:enable Metrics/MethodLength,Metrics/ParameterLists
