@@ -2,7 +2,7 @@ sudo: false
 dist: trusty
 language: ruby
 rvm:
-- 2.4.0
+- 2.4.1
 before_install: gem install bundler --no-document
 cache: bundler
 bundler_args: --path ../../vendor/bundle --without debug
