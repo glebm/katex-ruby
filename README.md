@@ -8,7 +8,7 @@ It uses [ExecJS] under the hood.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'katex', '~> 0.5.2'
+gem 'katex', '~> 0.6.0'
 ```
 
 And then execute:
