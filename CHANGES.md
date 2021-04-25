@@ -1,3 +1,7 @@
+# v0.8.0
+
+* KaTeX v0.13.3
+
 # v0.6.1
 
 * Relaxes Ruby version requirement to allow Ruby 3.
