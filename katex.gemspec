@@ -25,8 +25,8 @@ Gem::Specification.new do |s|
   s.add_dependency 'execjs', '~> 2.7'
 
   s.add_development_dependency 'bundler', '~> 2.0'
-  s.add_development_dependency 'rake', '~> 10.0'
+  s.add_development_dependency 'rake', '~> 13.0'
   s.add_development_dependency 'rspec', '~> 3.0'
-  s.add_development_dependency 'rubocop', '>= 0.55.0'
+  s.add_development_dependency 'rubocop', '= 0.81.0'
   s.add_development_dependency 'simplecov'
 end
